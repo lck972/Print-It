@@ -73,10 +73,39 @@ function updateActiveDot() {
     dots[currentIndex].classList.add('dot_selected')
 }
 
+
+/*function nextSlide() {
+    if (currentIndex + 1 < numberOfSlides) {
+        // Si l'index suivant est inférieur au nombre total de diapositives,
+        // incrémentez simplement l'index.
+        currentIndex = currentIndex + 1;
+    } else {
+        // Sinon, revenez à la première diapositive.
+        currentIndex = 0;
+    }
+    
+    updateSlide();
+}*/
+
+
 function nextSlide() {
     currentIndex = (currentIndex + 1) % numberOfSlides
     updateSlide()
 }
+
+/*function prevSlide() {
+    if (currentIndex - 1 >= 0) {
+        // Si l'index précédent est supérieur ou égal à zéro,
+        // décrémentez simplement l'index.
+        currentIndex = currentIndex - 1;
+    } else {
+        // Sinon, passez à la dernière diapositive.
+        currentIndex = numberOfSlides - 1;
+    }
+
+    updateSlide();
+}*/
+
 
 function prevSlide() {
     currentIndex = (currentIndex - 1 + numberOfSlides) % numberOfSlides
